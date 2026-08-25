@@ -406,16 +406,19 @@
       <legend>Live Overlay (YoloBox Web URL)</legend>
       <label>Overlay page address <span style="opacity:.6;font-weight:400;">(set this once)</span></label>
       <input type="text" id="hostBaseUrl" placeholder="https://yourname.github.io/talitha-overlay/overlay_live.html">
-      <div class="hint" style="margin-top:6px;">This is the web address where <code>overlay_live.html</code> is hosted. Set it once — it's remembered in this browser.</div>
+      <div class="hint" style="margin-top:6px;">This is the web address where <code>overlay_live.html</code> is hosted (must be a GitHub Pages link in the form https://yourname.github.io/reponame/overlay_live.html).</div>
+
+      <label style="margin-top:14px;">GitHub access token <span style="opacity:.6;font-weight:400;">(set this once)</span></label>
+      <input type="text" id="ghToken" placeholder="ghp_... or github_pat_...">
+      <div class="hint" style="margin-top:6px;">Lets the Studio save updates into your repo. Stays only in this browser — never shared. Ask me if you need help creating one.</div>
 
       <button type="button" class="add-btn" id="publishBtn" style="margin-top:14px;">⇪ Publish update</button>
       <div class="hint" id="linkStatus">Click Publish any time you change something — the live overlay on YoloBox updates itself within ~5 seconds. No need to touch YoloBox again after the first setup.</div>
 
       <label style="margin-top:14px;">Live overlay link <span style="opacity:.6;font-weight:400;">(paste into YoloBox once)</span></label>
-      <input type="text" id="liveLinkOut" readonly placeholder="Click Publish to create your permanent link" style="font-size:11px;">
+      <input type="text" id="liveLinkOut" readonly placeholder="This is the same address as above — paste it into YoloBox" style="font-size:11px;">
       <button type="button" class="add-btn" id="copyLinkBtn" style="margin-top:8px;">⧉ Copy link</button>
       <div class="hint">This link never changes — paste it into YoloBox's Web URL Overlay field once, then just use "Publish update" every week after.</div>
-      <div class="hint" style="margin-top:10px;"><a href="#" id="resetLinkBtn" style="color:#e2c273;">Start a fresh link instead</a> (only if you've lost the current one — this makes a new address you'd need to re-paste into YoloBox).</div>
     </fieldset>
 
     <div class="hint">Everything updates live in the preview on the right. Nothing here is saved or sent anywhere — it all stays in this browser tab.</div>
@@ -857,16 +860,22 @@ el('fetchVerseBtn').addEventListener('click', async ()=>{
   }
 });
 
-// ---- live overlay: publish state to a shared blob YoloBox polls ----
+// ---- live overlay: publish state as overlay-data.json into your GitHub repo ----
 const HOST_KEY = 'talithaOverlayHostUrl';
-const BLOB_KEY = 'talithaOverlayBlobId';
+const TOKEN_KEY = 'talithaOverlayGhToken';
 try{
   const savedHost = localStorage.getItem(HOST_KEY);
   if(savedHost) el('hostBaseUrl').value = savedHost;
+  const savedToken = localStorage.getItem(TOKEN_KEY);
+  if(savedToken) el('ghToken').value = savedToken;
 } catch(e){}
 
 el('hostBaseUrl').addEventListener('change', ()=>{
   try{ localStorage.setItem(HOST_KEY, el('hostBaseUrl').value.trim()); } catch(e){}
+  updateLinkField();
+});
+el('ghToken').addEventListener('change', ()=>{
+  try{ localStorage.setItem(TOKEN_KEY, el('ghToken').value.trim()); } catch(e){}
 });
 
 function buildStatePayload(){
@@ -887,62 +896,97 @@ function buildStatePayload(){
   };
 }
 
-function getBlobId(){
-  try{ return localStorage.getItem(BLOB_KEY); } catch(e){ return null; }
+// Parses owner/repo out of a GitHub Pages URL like:
+// https://<owner>.github.io/<repo>/overlay_live.html
+function parseGhPagesUrl(url){
+  try{
+    const m = url.match(/^https:\/\/([^.]+)\.github\.io\/([^\/]+)\//);
+    if(!m) return null;
+    return { owner: m[1], repo: m[2] };
+  } catch(e){ return null; }
 }
-function setBlobId(id){
-  try{ localStorage.setItem(BLOB_KEY, id); } catch(e){}
+
+function utf8ToBase64(str){
+  return btoa(unescape(encodeURIComponent(str)));
 }
 
 function updateLinkField(){
   const base = el('hostBaseUrl').value.trim();
-  const id = getBlobId();
-  if(base && id){
-    const sep = base.includes('?') ? '&' : '?';
-    el('liveLinkOut').value = base + sep + 'blob=' + encodeURIComponent(id);
-  }
+  el('liveLinkOut').value = base;
 }
 
 el('publishBtn').addEventListener('click', async ()=>{
   const statusEl = el('linkStatus');
   const base = el('hostBaseUrl').value.trim();
+  const token = el('ghToken').value.trim();
+
   if(!base){
     statusEl.textContent = 'Enter the overlay page address above first (where you hosted overlay_live.html).';
     return;
   }
-  try{ localStorage.setItem(HOST_KEY, base); } catch(e){}
+  const parsed = parseGhPagesUrl(base);
+  if(!parsed){
+    statusEl.textContent = 'That address doesn\'t look like a GitHub Pages link (should be https://yourname.github.io/reponame/overlay_live.html).';
+    return;
+  }
+  if(!token){
+    statusEl.textContent = 'Enter your GitHub access token above first — ask me if you need help creating one.';
+    return;
+  }
+  try{
+    localStorage.setItem(HOST_KEY, base);
+    localStorage.setItem(TOKEN_KEY, token);
+  } catch(e){}
+  updateLinkField();
 
   const payload = buildStatePayload();
-  let id = getBlobId();
+  const apiUrl = `https://api.github.com/repos/${parsed.owner}/${parsed.repo}/contents/overlay-data.json`;
   statusEl.textContent = 'Publishing…';
 
   try{
-    if(!id){
-      // first time — create the shared blob
-      const res = await fetch('https://jsonblob.com/api/jsonBlob', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      if(!res.ok) throw new Error('create failed');
-      const loc = res.headers.get('Location');
-      if(!loc) throw new Error('no id returned');
-      id = loc.split('/').pop();
-      setBlobId(id);
-      updateLinkField();
-      statusEl.textContent = 'Published! Copy the live link below and paste it into YoloBox once — after that, just hit Publish to update it.';
-    } else {
-      const res = await fetch('https://jsonblob.com/api/jsonBlob/' + encodeURIComponent(id), {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      if(!res.ok) throw new Error('update failed');
-      updateLinkField();
-      statusEl.textContent = 'Published! The live overlay on YoloBox will refresh within about 5 seconds.';
+    // check if the file already exists, to get its sha (required to update)
+    let sha = null;
+    const getRes = await fetch(apiUrl, {
+      headers: { 'Authorization': 'token ' + token, 'Accept': 'application/vnd.github+json' }
+    });
+    if(getRes.status === 200){
+      const getData = await getRes.json();
+      sha = getData.sha;
+    } else if(getRes.status === 401){
+      throw new Error('bad-token');
+    } else if(getRes.status !== 404){
+      throw new Error('get-failed');
     }
+
+    const body = {
+      message: 'Update overlay data',
+      content: utf8ToBase64(JSON.stringify(payload, null, 2)),
+    };
+    if(sha) body.sha = sha;
+
+    const putRes = await fetch(apiUrl, {
+      method: 'PUT',
+      headers: {
+        'Authorization': 'token ' + token,
+        'Accept': 'application/vnd.github+json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+
+    if(putRes.status === 401){ throw new Error('bad-token'); }
+    if(putRes.status === 404){ throw new Error('not-found'); }
+    if(!putRes.ok){ throw new Error('put-failed'); }
+
+    statusEl.textContent = 'Published! The live overlay on YoloBox will refresh within about 5 seconds.';
   } catch(e){
-    statusEl.textContent = 'Could not publish (network issue or the shared-storage service is unreachable). Try again in a moment.';
+    if(e.message === 'bad-token'){
+      statusEl.textContent = 'Your GitHub token was rejected — it may be expired or missing "Contents: Read and write" permission for this repo.';
+    } else if(e.message === 'not-found'){
+      statusEl.textContent = 'Could not find that repository — double check the overlay page address above.';
+    } else {
+      statusEl.textContent = 'Could not publish (network issue). Try again in a moment.';
+    }
   }
 });
 
@@ -950,7 +994,7 @@ el('copyLinkBtn').addEventListener('click', async ()=>{
   const val = el('liveLinkOut').value;
   const statusEl = el('linkStatus');
   if(!val){
-    statusEl.textContent = 'Click "Publish update" first to create your live link.';
+    statusEl.textContent = 'Enter the overlay page address above first.';
     return;
   }
   try{
@@ -960,13 +1004,6 @@ el('copyLinkBtn').addEventListener('click', async ()=>{
     el('liveLinkOut').select();
     statusEl.textContent = 'Select and copy the link above (clipboard access was blocked).';
   }
-});
-
-el('resetLinkBtn').addEventListener('click', (e)=>{
-  e.preventDefault();
-  try{ localStorage.removeItem(BLOB_KEY); } catch(err){}
-  el('liveLinkOut').value = '';
-  el('linkStatus').textContent = 'Starting fresh — click "Publish update" to create a brand new live link (you\'ll need to re-paste it into YoloBox).';
 });
 
 // ---- mode buttons ----

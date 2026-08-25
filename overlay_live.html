@@ -70,42 +70,39 @@ function currentState(){
   return stateFromParams(p);
 }
 
-// ---- poll a shared blob for live updates ----
-const urlParams = new URLSearchParams(window.location.search);
-const blobId = urlParams.get('blob');
+// ---- poll a same-origin data file (published by the Studio into the same repo) ----
+function applyRemoteData(data){
+  if(!data || typeof data !== 'object') return;
+  remoteState = {
+    church: (data.church || 'TALITHA MINISTRY').toUpperCase(),
+    scripture: data.scripture || '',
+    verseText: data.verseText || '',
+    serviceTitle: data.serviceTitle || '',
+    serviceTime: data.serviceTime || '',
+    pastor: data.pastor || '',
+    pastorTitle: data.pastorTitle || '',
+    platform: data.platform || '',
+    live: data.live !== false,
+    mode: data.mode || 'info',
+    give: Array.isArray(data.give) ? data.give : [],
+  };
+  render();
+}
 
-async function pollBlob(){
-  if(!blobId) return;
+async function pollData(){
   try{
-    const res = await fetch('https://jsonblob.com/api/jsonBlob/' + encodeURIComponent(blobId) + '?_=' + Date.now(), {
+    const res = await fetch('overlay-data.json?_=' + Date.now(), {
       cache: 'no-store',
       headers: { 'Accept': 'application/json' }
     });
-    if(!res.ok) return;
+    if(!res.ok) return; // not published yet, or a hiccup — keep showing last known state
     const data = await res.json();
-    if(data && typeof data === 'object'){
-      remoteState = {
-        church: (data.church || 'TALITHA MINISTRY').toUpperCase(),
-        scripture: data.scripture || '',
-        verseText: data.verseText || '',
-        serviceTitle: data.serviceTitle || '',
-        serviceTime: data.serviceTime || '',
-        pastor: data.pastor || '',
-        pastorTitle: data.pastorTitle || '',
-        platform: data.platform || '',
-        live: data.live !== false,
-        mode: data.mode || 'info',
-        give: Array.isArray(data.give) ? data.give : [],
-      };
-      render();
-    }
+    applyRemoteData(data);
   } catch(e){ /* keep showing last known state on any network hiccup */ }
 }
 
-if(blobId){
-  pollBlob();
-  setInterval(pollBlob, 5000);
-}
+pollData();
+setInterval(pollData, 5000);
 
 // ---- helpers ----
 function roundRect(c, x, y, w, h, r){
