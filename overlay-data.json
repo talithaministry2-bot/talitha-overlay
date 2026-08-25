@@ -1,0 +1,22 @@
+{
+  "church": "TALITHA MINISTRY",
+  "scripture": "Marko 5:41",
+  "verseText": "",
+  "serviceTitle": "Sunday Service",
+  "serviceTime": "10:00 AM",
+  "pastor": "",
+  "pastorTitle": "Senior Pastor",
+  "platform": "YouTube Live",
+  "live": true,
+  "mode": "info",
+  "give": [
+    {
+      "method": "M-Pesa",
+      "details": ""
+    },
+    {
+      "method": "Bank",
+      "details": ""
+    }
+  ]
+}
