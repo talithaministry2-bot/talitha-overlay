@@ -2,20 +2,20 @@
   "church": "TALITHA TV",
   "scripture": "",
   "verseText": "",
-  "serviceTitle": "Sunday Service",
-  "serviceTime": "10:00 AM",
+  "serviceTitle": "IBADA YA JUMAPILI",
+  "serviceTime": "09:00 AM",
   "pastor": "Bernard Steven",
   "pastorTitle": "Mchungaji",
   "platform": "YouTube Live",
   "live": true,
-  "mode": "info",
+  "mode": "giving",
   "give": [
     {
       "method": "M-Pesa",
-      "details": ""
+      "details": "0625514743"
     },
     {
-      "method": "Bank",
+      "method": "JINA:BERNARD STEVEN",
       "details": ""
     }
   ]
