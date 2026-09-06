@@ -8,15 +8,19 @@
   "pastorTitle": "",
   "platform": "YouTube Live",
   "live": true,
-  "mode": "info",
+  "mode": "giving",
   "give": [
     {
-      "method": "M-Pesa",
-      "details": ""
+      "method": "TUMA SADAKA HUKU",
+      "details": "0718862051"
     },
     {
-      "method": "Bank",
-      "details": ""
+      "method": "JINA",
+      "details": "Lightness Sommy"
+    },
+    {
+      "method": "MTANDAO",
+      "details": "MIX BY YAS"
     }
   ]
 }
