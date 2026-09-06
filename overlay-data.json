@@ -1,21 +1,21 @@
 {
   "church": "TALITHA TV",
-  "scripture": "NENO LA KUZINGATIA",
-  "verseText": "ibada ya kweli ni pamoja na kutoa sadaka ",
+  "scripture": "SIFA NA MAABUDU",
+  "verseText": "",
   "serviceTitle": "IBADA YA JUMAPILI",
   "serviceTime": "09:00 AM",
-  "pastor": "Bernard Steven",
-  "pastorTitle": "Mchungaji",
+  "pastor": "ELSHADAI KWAYA",
+  "pastorTitle": "",
   "platform": "YouTube Live",
   "live": true,
   "mode": "info",
   "give": [
     {
       "method": "M-Pesa",
-      "details": "0625514743"
+      "details": ""
     },
     {
-      "method": "JINA:BERNARD STEVEN",
+      "method": "Bank",
       "details": ""
     }
   ]
