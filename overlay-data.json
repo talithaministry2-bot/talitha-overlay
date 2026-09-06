@@ -1,14 +1,14 @@
 {
   "church": "TALITHA TV",
-  "scripture": "NGUVU YA NENO LA MUNGU",
+  "scripture": "",
   "verseText": "Ni muhimu kujua nguvu ya Mungu inayotoa watu katika maangamizi ili kukusaidia kutolewa katika changamoto unazopitia",
   "serviceTitle": "IBADA YA JUMAPILI",
   "serviceTime": "09:00 AM",
-  "pastor": "ELSHADAI KWAYA",
-  "pastorTitle": "",
+  "pastor": "LIGHTNESS SOMY",
+  "pastorTitle": "NABII",
   "platform": "YouTube Live",
   "live": true,
-  "mode": "scripture",
+  "mode": "info",
   "give": [
     {
       "method": "TUMA SADAKA HUKU",
