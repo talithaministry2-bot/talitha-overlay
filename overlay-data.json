@@ -1,14 +1,14 @@
 {
   "church": "TALITHA TV",
-  "scripture": "NGUVU YA ASILI",
-  "verseText": "Kama hujatolewa kwenye asili maisha yako yanaweza kuvurugika kabisa, kama ndoa imeshikiliwa kwenye asili ni ngumu kuona furaha ya ndoa",
+  "scripture": "mwanzo 12:1",
+  "verseText": "' BWANA akamwambia Abramu, Toka wewe katika nchi yako, na jamaa zako, na nyumba ya baba yako, uende mpaka nchi nitakayokuonyesha; '",
   "serviceTitle": "NENO",
   "serviceTime": "09:00 AM",
   "pastor": "Lightness Sommy",
   "pastorTitle": "NABII",
   "platform": "YouTube Live",
   "live": true,
-  "mode": "info",
+  "mode": "scripture",
   "give": [
     {
       "method": "JIFUNGAMANISHE KWA SADAKA",
