@@ -1,14 +1,14 @@
 {
   "church": "TALITHA TV",
-  "scripture": "NGUVU YA ASILI",
-  "verseText": "' BWANA akamwambia Abramu, Toka wewe katika nchi yako, na jamaa zako, na nyumba ya baba yako, uende mpaka nchi nitakayokuonyesha; '",
+  "scripture": "isaya 58:12",
+  "verseText": "'Na watu wako watapajenga mahali palipokuwa ukiwa; utaiinua misingi ya vizazi vingi; nawe utaitwa, Mwenye kutengeneza mahali palipobomoka; na, Mwenye kurejeza njia za kukalia. '",
   "serviceTitle": "UNABII NA NENO",
   "serviceTime": "09:00 AM",
   "pastor": "Lightness Sommy",
   "pastorTitle": "NABII",
   "platform": "YouTube Live",
   "live": true,
-  "mode": "giving",
+  "mode": "scripture",
   "give": [
     {
       "method": "JIFUNGAMANISHE KWA SADAKA",
