@@ -1,14 +1,14 @@
 {
   "church": "TALITHA TV",
-  "scripture": "mwanzo 12:1",
+  "scripture": "NGUVU YA ASILI",
   "verseText": "' BWANA akamwambia Abramu, Toka wewe katika nchi yako, na jamaa zako, na nyumba ya baba yako, uende mpaka nchi nitakayokuonyesha; '",
-  "serviceTitle": "NENO",
+  "serviceTitle": "UNABII NA NENO",
   "serviceTime": "09:00 AM",
   "pastor": "Lightness Sommy",
   "pastorTitle": "NABII",
   "platform": "YouTube Live",
   "live": true,
-  "mode": "giving",
+  "mode": "info",
   "give": [
     {
       "method": "JIFUNGAMANISHE KWA SADAKA",
