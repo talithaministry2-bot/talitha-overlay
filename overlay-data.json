@@ -1,26 +1,24 @@
 {
-  "church": "TALITHA TV",
-  "scripture": "MAOMBI YA KUFUNGULIWA",
+  "church": "TALITHA MINISTRY",
+  "scripture": "Marko 5:41",
   "verseText": "",
-  "serviceTitle": "IBADA YA JUMAPILI",
-  "serviceTime": "09:00 AM",
-  "pastor": "Lightness Sommy",
-  "pastorTitle": "NABII",
+  "serviceTitle": "Sunday Service",
+  "serviceTime": "10:00 AM",
+  "pastor": "",
+  "pastorTitle": "Senior Pastor",
   "platform": "YouTube Live",
   "live": true,
   "mode": "info",
   "give": [
     {
-      "method": "JIFUNGAMANISHE KWA SADAKA",
-      "details": "0718862051"
+      "method": "M-Pesa",
+      "details": ""
     },
     {
-      "method": "JINA",
-      "details": "Lightness Sommy"
-    },
-    {
-      "method": "MTANDAO",
-      "details": "MIX BY YAS"
+      "method": "Bank",
+      "details": ""
     }
-  ]
+  ],
+  "tickerEnabled": true,
+  "tickerText": "TALITHA MINISTRY TANZANIA  •  MARKO 5:41 — “TALITHA KUM, INUKA”  •  HUDUMA YA UNABII | USHAURI | UKOMBOZI | INUKA UANGAZE\n\nKARIBU SANA KATIKA IBADA YA JUMAPILI LIVE  •  TEGETA NAMANGA, BWAWANI STREET, BUNJU  •  MUNGU AKUBARIKI UNAPOTUANGALIA\nTALITHA MINISTRY — TEGETA NAMANGA, DAR ES SALAAM  •  ministrytalitha@gmail.com  •  TUFUATILIE YOUTUBE @talithaministry\n\nKARIBU KWENYE IBADA YA UKOMBOZI KILA IJUMAA SAA 10 JIONI KWA AJILI YA MAOMBI YA KUFUNGULIWA NA KUWEKWA HURU\n\nTALITHA INA MATAWI MAENEO TOFAUTI NCHINI TANZANIA KAMA VILE KIGAMBONI, IKWIRIRI,FUKAYOSI NA MPANDA\n\nKWA AJILI YA TAARIFA ZAIDI WASILIANA NASI KATIKA NAMBA 0625514743"
 }
