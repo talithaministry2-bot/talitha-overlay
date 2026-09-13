@@ -1,22 +1,22 @@
 {
   "church": "TALITHA TV",
-  "scripture": "nguvu ya sadaka",
-  "verseText": "KARIBU KWENYE IBADA YETU KUU YA JUMAPILI ",
+  "scripture": "NGUVU YA SADAKA",
+  "verseText": "OMBA KWA KUMAANISHA POPOTE ULIPO",
   "serviceTitle": "IBADA YA JUMAPILI",
   "serviceTime": "09:00 AM",
   "pastor": "Anderson Mushi & John kadaya",
   "pastorTitle": "wachungaji",
   "platform": "YouTube & Facebook",
   "live": true,
-  "mode": "info",
+  "mode": "giving",
   "give": [
     {
-      "method": "M-Pesa",
-      "details": ""
+      "method": "MIX BY YAS",
+      "details": "0718862051"
     },
     {
-      "method": "Bank",
-      "details": ""
+      "method": "JINA",
+      "details": "LIGHTNESS SOMMY"
     }
   ],
   "tickerEnabled": true,
