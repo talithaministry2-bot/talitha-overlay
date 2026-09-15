@@ -1,11 +1,11 @@
 {
-  "church": "TALITHA MINISTRY",
-  "scripture": "Marko 5:41",
+  "church": "TALITHA TV",
+  "scripture": "SEMINA YA UKOMBOZI",
   "verseText": "",
-  "serviceTitle": "Sunday Service",
-  "serviceTime": "10:00 AM",
-  "pastor": "",
-  "pastorTitle": "Senior Pastor",
+  "serviceTitle": "SEMINA YA UKOMBOZI",
+  "serviceTime": "15.09.2026",
+  "pastor": "EDDY MULANDA",
+  "pastorTitle": "mchungaji",
   "platform": "YouTube Live",
   "live": true,
   "mode": "info",
@@ -19,6 +19,6 @@
       "details": ""
     }
   ],
-  "tickerEnabled": false,
-  "tickerText": ""
+  "tickerEnabled": true,
+  "tickerText": "SEMINA YA WIKI INAENDELEA • TALITHA MINISTRY • TEGETA NAMANGA\n\nSIKU YA 2 • NJOO LEO NA MWENZAKO • USIKOSE NENO\n\nANDIKA AMINA UKIWA LIVE • \n\nROHO MTAKATIFU NJAAZE • BABA USINIPITE WIKI HII\n\nMARKO 5:41 — TALITHA KUMI, INUKA\n\nKARIBU TEGETA NAMANGA, BWAWANI STREET, BUNJU\n\nLIKE • SHARE • ALIKA FAMILIA • SEMINA INAENDELEA KILA SIKU WIKI HII"
 }
