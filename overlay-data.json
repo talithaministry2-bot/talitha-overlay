@@ -1,24 +1,24 @@
 {
-  "church": "TALITHA TV",
-  "scripture": "NGUVU YA SADAKA",
-  "verseText": "OMBA KWA KUMAANISHA POPOTE ULIPO",
-  "serviceTitle": "IBADA YA JUMAPILI",
-  "serviceTime": "09:00 AM",
-  "pastor": "Lightness Sommy",
-  "pastorTitle": "Nabii",
-  "platform": "YouTube & Facebook",
+  "church": "TALITHA MINISTRY",
+  "scripture": "Marko 5:41",
+  "verseText": "",
+  "serviceTitle": "Sunday Service",
+  "serviceTime": "10:00 AM",
+  "pastor": "",
+  "pastorTitle": "Senior Pastor",
+  "platform": "YouTube Live",
   "live": true,
   "mode": "info",
   "give": [
     {
-      "method": "MIX BY YAS",
-      "details": "0718862051"
+      "method": "M-Pesa",
+      "details": ""
     },
     {
-      "method": "JINA",
-      "details": "LIGHTNESS SOMMY"
+      "method": "Bank",
+      "details": ""
     }
   ],
-  "tickerEnabled": true,
-  "tickerText": "TALITHA MINISTRY TANZANIA  •  MARKO 5:41 — “TALITHA KUM, INUKA”  •  HUDUMA YA UNABII | USHAURI | UKOMBOZI | INUKA UANGAZE\n\nKARIBU SANA KATIKA IBADA YA JUMAPILI LIVE  •  TEGETA NAMANGA, BWAWANI STREET •  MUNGU AKUBARIKI UNAPOTUANGALIA\nTALITHA MINISTRY — TEGETA NAMANGA, DAR ES SALAAM  •  ministrytalitha@gmail.com  •  TUFUATILIE YOUTUBE @talithaministry\n\nKAMA UNATUFUALITILIA IBADA YETU LIVE KWENYE YOUTUBE BASI JITAHIDI KUSHARE NA WENGINE LINK YA IBADA YETU ILI WENGINE WAFUNGULIWE\n\nCOMMENT MAOMBI YAKO KWENYE COMMENT SECTION\n\nTUMA SADAKA YAKO YA KUJIFUNGAMANISHA KWENYE IBADA YETU YA LEO KWENYE NAMBA 0718862051 - LIGHTNESS SOMMY\n\nUMBALI SIO KIZUIZI OMBA PAMOJA NA WACHUNGAJI UKOMBOZI UNAKUJILIA SASA"
+  "tickerEnabled": false,
+  "tickerText": ""
 }
