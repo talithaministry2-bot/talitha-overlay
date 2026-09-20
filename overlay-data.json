@@ -1,24 +1,24 @@
 {
   "church": "TALITHA TV",
-  "scripture": "SEMINA YA UKOMBOZI",
+  "scripture": "ibada kuu -20.09.2026",
   "verseText": "",
-  "serviceTitle": "SEMINA YA UKOMBOZI",
-  "serviceTime": "15.09.2026",
-  "pastor": "EDDY MULANDA",
-  "pastorTitle": "mchungaji",
-  "platform": "YouTube Live",
+  "serviceTitle": "IBADA YA JUMAPILI",
+  "serviceTime": "20.09.2026",
+  "pastor": "Lightness Sommy",
+  "pastorTitle": "Nabii",
+  "platform": "YouTube & Facebook",
   "live": true,
   "mode": "info",
   "give": [
     {
       "method": "M-Pesa",
-      "details": ""
+      "details": "0875789 96"
     },
     {
       "method": "Bank",
-      "details": ""
+      "details": "014098980"
     }
   ],
   "tickerEnabled": true,
-  "tickerText": "SEMINA YA WIKI INAENDELEA • TALITHA MINISTRY • TEGETA NAMANGA\n\nSIKU YA 2 • NJOO LEO NA MWENZAKO • USIKOSE NENO\n\nANDIKA AMINA UKIWA LIVE • \n\nROHO MTAKATIFU NJAAZE • BABA USINIPITE WIKI HII\n\nMARKO 5:41 — TALITHA KUMI, INUKA\n\nKARIBU TEGETA NAMANGA, BWAWANI STREET, BUNJU\n\nLIKE • SHARE • ALIKA FAMILIA • SEMINA INAENDELEA KILA SIKU WIKI HII"
+  "tickerText": "Tunamshukuru Mungu kwa kutukutanisha pamoja katika uwepo wake. Kama ni mara yako ya kwanza kuwa nasi, tunakukaribisha sana. Tunaamini Mungu ana jambo maalumu kwa ajili yako leo.\n\nTafadhali Subscribe kwenye YouTube channel yetu ya Talitha Ministry.\n\nKama Mungu amekutendea jambo kupitia huduma ya Talitha Ministry, tungependa kusikia ushuhuda wako. Wasiliana na huduma na tushirikishe kile Mungu amefanya katika maisha yako.\n\nSubscribe YouTube yetu, follow mitandao yetu, share mafundisho haya na mwalike mtu mwingine kwenye ibada ijayo.\nTalitha Ministry Tanzania — mahali pa kujengwa katika Neno, katika maombi na katika kumjua Mungu."
 }
