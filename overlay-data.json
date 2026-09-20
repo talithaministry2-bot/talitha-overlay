@@ -1,14 +1,14 @@
 {
   "church": "TALITHA TV",
   "scripture": "ibada kuu -20.09.2026",
-  "verseText": "",
+  "verseText": "Mwivi haji ila aibe na kuchinja na kuharibu; mimi nalikuja ili wawe na uzima, kisha wawe nao tele.\"\n\nYOHANA 10:10\n",
   "serviceTitle": "IBADA YA JUMAPILI",
   "serviceTime": "20.09.2026",
   "pastor": "EDDY MULANDA",
   "pastorTitle": "Mchungaji",
   "platform": "YouTube & Facebook",
   "live": true,
-  "mode": "info",
+  "mode": "scripture",
   "give": [
     {
       "method": "M-Pesa",
