@@ -8,15 +8,15 @@
   "pastorTitle": "MCHUNGAJI",
   "platform": "YouTube & Facebook",
   "live": true,
-  "mode": "info",
+  "mode": "giving",
   "give": [
     {
-      "method": "M-Pesa",
-      "details": ""
+      "method": "MIX  BY YAS",
+      "details": "0718862051"
     },
     {
-      "method": "Bank",
-      "details": ""
+      "method": "JINA",
+      "details": "LIGHTNESS SOMMY"
     }
   ],
   "tickerEnabled": true,
