@@ -1,24 +1,24 @@
 {
   "church": "TALITHA TV",
-  "scripture": "JFUNGAMANISHE KWENYE MAOMBI HAYA KWA SADAKA",
-  "verseText": "TUMA SADAKA KWA AJILI YA MAOMBI YANAYOENDELEA\nTUMA KWENYE NAMBA 0718862051 JINA LIGHTNESS SOMMY\n",
+  "scripture": "Marko 5:41",
+  "verseText": "",
   "serviceTitle": "IBADA YA JUMAPILI",
-  "serviceTime": "20.09.2026",
+  "serviceTime": "09:00",
   "pastor": "EDDY MULANDA",
-  "pastorTitle": "Mchungaji",
+  "pastorTitle": "MCHUNGAJI",
   "platform": "YouTube & Facebook",
   "live": true,
-  "mode": "scripture",
+  "mode": "info",
   "give": [
     {
       "method": "M-Pesa",
-      "details": "0875789 96"
+      "details": ""
     },
     {
       "method": "Bank",
-      "details": "014098980"
+      "details": ""
     }
   ],
-  "tickerEnabled": true,
-  "tickerText": "HUDUMA YA TALITHA MINISTRY INA FURAHA KUTOA TAARIFA YA IBADA YA WATOTO ITAKAYOFANYIKA TAREHE 26.11.2026 KARIBU KAMA MWANA TALITHA KUSHIRIKI BARAKA YA KUCHANGIA KWA AJILI YA KUKAMILISHA MAANDALIZI YA IBADA HIO YA WATOTO\n\nUNATAKA KUWA WA KWANZA KUPATA LINK ZETU ZA IBADA KILA TUNAPOKUWA HEWANI BASI WASILIANA NASI KWENYE NAMBA 0625514743 \n\n"
+  "tickerEnabled": false,
+  "tickerText": ""
 }
