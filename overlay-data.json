@@ -1,24 +1,24 @@
 {
   "church": "TALITHA TV",
-  "scripture": "MBINU AMBAZO SHETANI HUTUMIA KUANGAMIZA MTU",
+  "scripture": "Marko 5:41",
   "verseText": "",
   "serviceTitle": "IBADA YA JUMAPILI",
-  "serviceTime": "09:00",
-  "pastor": "EDDY MULANDA",
-  "pastorTitle": "MCHUNGAJI",
+  "serviceTime": "04.10.2026",
+  "pastor": "LIGHTNESS SOMY",
+  "pastorTitle": "",
   "platform": "YouTube & Facebook",
   "live": true,
-  "mode": "giving",
+  "mode": "info",
   "give": [
     {
-      "method": "MIX  BY YAS",
-      "details": "0718862051"
+      "method": "M-Pesa",
+      "details": ""
     },
     {
-      "method": "JINA",
-      "details": "LIGHTNESS SOMMY"
+      "method": "Bank",
+      "details": ""
     }
   ],
-  "tickerEnabled": true,
-  "tickerText": "KARIBU KWENYE IBADA YETU LIVE KILA SIKU YA JUMAPILI KUANZIA SAA TATU KAMILI ASUBUHI HAPA TEGETA NAMANGA, MTAA WA BWAWANI KWA MAELEKEZO ZAIDI WASILIANA NA NAMBA 0625514743"
+  "tickerEnabled": false,
+  "tickerText": ""
 }
