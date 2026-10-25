@@ -1,12 +1,12 @@
 {
   "church": "TALITHA TV",
-  "scripture": "MAOMBI",
+  "scripture": "Marko 5:41",
   "verseText": "",
   "serviceTitle": "IBADA YA JUMAPILI",
-  "serviceTime": "18.10.2026",
+  "serviceTime": "25.10.2026",
   "pastor": "Lightness Sommy",
-  "pastorTitle": "Nabii",
-  "platform": "YouTube & Facebook",
+  "pastorTitle": "Nabii ",
+  "platform": "YouTube Live",
   "live": true,
   "mode": "info",
   "give": [
@@ -19,6 +19,6 @@
       "details": ""
     }
   ],
-  "tickerEnabled": true,
-  "tickerText": "RATIBA YA WIKI: JUMATATU; IBADA YA VIJANA, JUMANNE ; IBADA YA ZONE, JUMATANO; IBADA YA NENO NA MAOMBEZI, ALHAMISI; MAZOEZI YA KWAYA, IJUMAA; IBADA YA UKOMBOZI NA NENO, JUMAMOSI; EBENEZER, JUMAPILI; IBADA KUU, USHAURI NA MADARASA YA KUKULIA WOKOVU. MORNING GLORY KILA SIKU 11:30- 12:30"
+  "tickerEnabled": false,
+  "tickerText": ""
 }
